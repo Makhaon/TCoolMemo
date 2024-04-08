@@ -288,7 +288,7 @@ const
  LEFT_SHIFT = 1;
  DEFAULT_VALUE = MaxInt;
  AutoCompleteChars = #8 + #46 +
-  '_0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmÉÖÓÊÅÍÃØÙÇÕÚÔÛÂÀÏĞÎËÄÆİß×ÑÌÈÒÜÁŞ¨éöóêåíãøùçõúôûâàïğîëäæıÿ÷ñìèòüáş¸';
+  '_0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmĞ™Ğ¦Ğ£ĞšĞ•ĞĞ“Ğ¨Ğ©Ğ—Ğ¥ĞªĞ¤Ğ«Ğ’ĞĞŸĞ ĞĞ›Ğ”Ğ–Ğ­Ğ¯Ğ§Ğ¡ĞœĞ˜Ğ¢Ğ¬Ğ‘Ğ®ĞĞ¹Ñ†ÑƒĞºĞµĞ½Ğ³ÑˆÑ‰Ğ·Ñ…ÑŠÑ„Ñ‹Ğ²Ğ°Ğ¿Ñ€Ğ¾Ğ»Ğ´Ğ¶ÑÑÑ‡ÑĞ¼Ğ¸Ñ‚ÑŒĞ±ÑÑ‘';
  Separators: TSysCharSet = [#00, ' ', '-', #13, #10, '.', ',', '/', '\', '#', '"', '''', ':',
   '+', '%', '*', '(', ')', ';', '=', '{', '}', '[', ']', '<', '>'];
 
@@ -300,7 +300,7 @@ const
 function IsSeparator(Car: char; MinusIsSeparator: boolean): boolean;
 begin
  case Car of
-  '.', ';', ',', ':', '!', '·', '"', '''', '^', '+', '*', '/', '\',
+  '.', ';', ',', ':', '!', 'Â·', '"', '''', '^', '+', '*', '/', '\',
   ' ', '`', '[', ']', '(', ')', '{', '}', '?', '%', '=': Result :=
     True;
   '-': Result := MinusIsSeparator;
@@ -509,7 +509,7 @@ begin
       X := LEFT_SHIFT;
       s := Lines[i];
       CurrStr := s;
-      //Detecto todas las palabras de esta línea
+      //Detecto todas las palabras de esta lĞ½nea
       Palabra := NextWord(s, PrevWord, SpellOK);
       while Palabra <> '' do
       begin
